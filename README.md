@@ -51,7 +51,10 @@ El sistema fue diseñado para abordar problemas críticos de gestión de datos e
 
 ## Diagramas
 
-Puedes encontrar los diagramas sobre la estructura de la base de datos en la carpeta `/diagrams`. Aquí incluimos el **modelo E-R** y el **modelo relacional**, ambos fundamentales para comprender la estructura del sistema y su lógica de negocios.
+Puedes encontrar los diagramas sobre la estructura de la base de datos en proyecto. Aquí incluimos el **modelo E-R** y el **modelo relacional**, ambos fundamentales para comprender la estructura del sistema y su lógica de negocios.
 
-- ![Diagrama Entidad-Relación](./diagrams/er-diagram.png)
-- ![Diagrama Relacional](./diagrams/relational-diagram.png)
+### Diagrama Relacional
+![Diagrama Relacional](./Diagrama%20relacional.png)
+
+### Modelo Entidad-Relación
+![Modelo ER](./ModeloER.drawio.png)
