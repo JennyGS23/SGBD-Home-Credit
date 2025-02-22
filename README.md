@@ -1,60 +1,60 @@
-# Home Credit Database Management System
+# Mortgage Credit Database Management System
 
-Este repositorio contiene el desarrollo de un sistema de gestión de bases de datos (SGBD) utilizando **SQL Server**, basado en el caso de estudio de la empresa de servicios financieros **Home Credit**. El objetivo del proyecto es mejorar la eficiencia en la gestión de datos mediante la implementación de un modelo de base de datos que cumpla con los principios de **normalización, optimización, seguridad** y **alta disponibilidad**. 
+This repository contains the development of a database management system (DBMS) using **SQL Server**, based on the case study of the financial services company **Home Credit**. The objective of the project is to improve efficiency in data management by implementing a database model that complies with the principles of **normalization, optimization, security** and **high availability**.
 
-## Descripción del Proyecto
+## Project Description
 
-El sistema fue diseñado para abordar problemas críticos de gestión de datos en Home Credit, como la falta de normalización, redundancia, seguridad insuficiente y tiempo de inactividad. El proyecto incluye el desarrollo de:
+The system was designed to address critical data management issues at Home Credit, such as lack of normalization, redundancy, insufficient security and downtime. The project includes the development of:
 
-- Un modelo **E-R** y un modelo **relacional**.
-- **10 tablas** con al menos 5 atributos.
-- Tres esquemas para dividir lógicamente las tablas.
-- Un **migrador** para actualizar la base de datos.
-- Un **servidor de auditoría** para almacenar transacciones.
-- **Funciones y triggers** para garantizar la integridad de los datos.
-- **Índices no clúster** y **consultas SARGABLES** para mejorar la eficiencia de las consultas.
+- An **E-R** model and a **relational** model.
+- **10 tables** with at least 5 attributes.
+- Three schemas to logically divide the tables.
+- A **migrator** to update the database.
+- An **audit server** to store transactions.
+- **Functions and triggers** to ensure data integrity.
+- **Nonclustered indexes** and **SARGABLE queries** to improve query efficiency.
 
-## Estructura del Repositorio
+## Repository Structure
 
-- `/diagrams`: Contiene los diagramas del modelo entidad-relación (E-R) y del modelo relacional.
-- `/migrations`: Scripts SQL para la migración de datos desde los archivos CSV.
-- `/stored_procedures`: Procedimientos almacenados y funciones desarrolladas para el sistema.
-- `/triggers`: Triggers para verificar la integridad de los datos.
-- `/indexes`: Definición de índices no clúster.
-- `/queries`: Consultas SARGABLES utilizadas en el proyecto.
-- `/docs`: Documentación adicional del proyecto.
+- `/diagrams`: Contains the diagrams of the entity-relationship (E-R) model and the relational model.
+- `/migrations`: SQL scripts for data migration from CSV files.
+- `/stored_procedures`: Stored procedures and functions developed for the system.
+- `/triggers`: Triggers to verify data integrity.
+- `/indexes`: Definition of non-clustered indexes.
+- `/queries`: SARGABLE queries used in the project.
+- `/docs`: Additional documentation for the project.
+- 
+## Requirements
 
-## Requisitos
+- **SQL Server** for database administration.
+- **Python** for bulk data loading into the system and creating the 5-component dashboard with 1 million records.
+- **Development tools** class views for implementing the requested functionalities.
 
-- **SQL Server** para la administración de la base de datos.
-- **Python** para la carga de datos masiva en el sistema y la creación del dashboard de 5 componentes con 1 millón de registros.
-- **Herramientas de desarrollo** vistas en clase para la implementación de las funcionalidades solicitadas.
+## Installation
 
-## Instalación
+1. Clone this repository to your local environment:
+```bash
+https://github.com/JennyGS23/SGBD-Home-Credit.git
+```
+2. Upload the table creation scripts from `/migrations` to your **SQL Server** instance.
+3. Run the stored procedures and triggers from the corresponding folders.
+4. Use the migrator to transfer data from the CSV files to the new schema.
+5. Configure the users and permissions as indicated in `/queries/roles.sql`.
 
-1. Clona este repositorio en tu entorno local:
-   ```bash
-   https://github.com/JennyGS23/SGBD-Home-Credit.git
-   ```
-2. Carga los scripts de creación de tablas desde `/migrations` en tu instancia de **SQL Server**.
-3. Ejecuta los procedimientos almacenados y triggers desde las carpetas correspondientes.
-4. Utiliza el migrador para transferir datos desde los archivos CSV al nuevo esquema.
-5. Configura los usuarios y permisos como se indica en `/queries/roles.sql`.
+## Usage
 
-## Uso
+1. The database is structured in three schemas that divide the tables for management.
+2. Triggers will ensure that the entered values ​​are valid and maintain data integrity.
+3. The audit server stores a history of all transactions performed.
+4. The web system can display a 5-component **dashboard**, with fast data loading (1 million records per component).
+5. SARGABLE queries, located in `/queries`, can be used as filters on the website for greater efficiency in retrieving information.
 
-1. La base de datos se estructura en tres esquemas que dividen las tablas para su administración.
-2. Los triggers asegurarán que los valores ingresados sean válidos y mantendrán la integridad de los datos.
-3. El servidor de auditoría almacena un historial de todas las transacciones realizadas.
-4. El sistema web puede mostrar un **dashboard** de 5 componentes, con carga rápida de datos (1 millón de registros por componente).
-5. Las consultas SARGABLES, ubicadas en `/queries`, pueden ser utilizadas como filtros en el sitio web para una mayor eficiencia en la recuperación de información.
+## Diagrams
 
-## Diagramas
+You can find diagrams on the structure of the database in the project. Here we include the **E-R model** and the **relational model**, both essential to understand the structure of the system and its business logic.
 
-Puedes encontrar los diagramas sobre la estructura de la base de datos en proyecto. Aquí incluimos el **modelo E-R** y el **modelo relacional**, ambos fundamentales para comprender la estructura del sistema y su lógica de negocios.
+### Relational Diagram
+![Relational Diagram](./Diagrama%20relacional.png)
 
-### Diagrama Relacional
-![Diagrama Relacional](./Diagrama%20relacional.png)
-
-### Modelo Entidad-Relación
-![Modelo ER](./ModeloER.drawio.png)
+### Entity-Relationship Model
+![Model ER](./ModeloER.drawio.png)
